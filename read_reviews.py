@@ -22,9 +22,20 @@ print(new[0].strip())
 print('--------')
 print(new[1])
 
-good = []
-for d in data:
-	if 'good' in d:
-		good.append(d)
+#good = []
+#for d in data:
+#	if 'good' in d:
+#		good.append(d)
+good = [d for d in data if 'good' in d]
+
 print('一共有', len(good), '筆留言提到good')
 print('第6筆資料', good[5])
+
+good = [1 for d in data if 'good' in d]
+print(good)
+
+bad = ['bad' in d for d in data] #無篩選 1000000 個 true/false
+# bad = []
+# for d in data:
+#	bad.append('bad' in d)
+print(bad)
