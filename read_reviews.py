@@ -17,8 +17,14 @@ new = []
 for d in data:
 	if len(d) < 100:
 		new.append(d)
-print('一共有', len(d), '筆留言長度<100')
-print(new[0])
+print('一共有', len(d), '筆留言長度<100字母')
+print(new[0].strip())
 print('--------')
 print(new[1])
 
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('一共有', len(good), '筆留言提到good')
+print('第6筆資料', good[5])
